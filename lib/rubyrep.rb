@@ -4,7 +4,7 @@ $LOAD_PATH.unshift File.dirname(__FILE__) + "/rubyrep"
 require 'rubygems'
 require 'yaml'
 
-gem 'activerecord', '>= 4.2', '< 5'
+gem 'activerecord', '>= 7.0', '< 7.2'
 require 'active_record'
 require 'activerecord-jdbc-adapter' if RUBY_PLATFORM == 'java'
 require 'ap'
@@ -69,5 +69,5 @@ Dir["#{File.dirname(__FILE__)}/rubyrep/replication_extenders/*.rb"].each do |ext
 end
 
 module RR
-  
+
 end

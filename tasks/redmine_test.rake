@@ -15,7 +15,6 @@ def install_redmine(database, name = nil)
     ENV['RAILS_ENV'] = 'production'
     config = File.read('config/database.yml.example')
     config.gsub! 'redmine', name
-    config.gsub! 'mysql', database
     if database == 'postgresql'
       config.gsub! 'root', 'postgres'
     end

@@ -1,5 +1,5 @@
 # Simple rubyrep configuration file for use by rspec tests.
-# Can be tweaked to either use mysql or postgresql.
+# Can be tweaked to either use  mysql (not supported yet) or postgresql.
 #
 # IMPORTANT:
 # Due to configuration of committer :default will NOT work for manual running

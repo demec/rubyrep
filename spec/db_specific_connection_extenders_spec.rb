@@ -6,7 +6,7 @@ require 'connection_extender_interface.rb'
 
 include RR
 
-extenders = [:mysql, :postgres]
+extenders = [:postgres]
 
 extenders.each do |extender|
   describe "#{extender.to_s.capitalize} Connection Extender" do

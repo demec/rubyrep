@@ -18,9 +18,7 @@ namespace :deploy do
       unset GEM_HOME
       unset GEM_PATH
       gem install activerecord -v 4.2.8
-      gem install jdbc-mysql -v 5.1.42
       gem install jdbc-postgres -v 9.4.1206
-      gem install activerecord-jdbcmysql-adapter -v 1.3.23
       gem install activerecord-jdbcpostgresql-adapter -v 1.3.23
       gem install awesome_print -v 1.7.0
     ]

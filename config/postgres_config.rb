@@ -3,19 +3,19 @@
 
 RR::Initializer::run do |config|
   config.left = {
-    :adapter  => 'postgresql',   
+    :adapter  => 'postgresql',
     :database => 'rr_left',
-    :username => 'postgres',   
-    :password => 'password',   
+    :username => 'rubyrep',
+    :password => 'rubyrep',
     :host     => 'localhost',
     :min_messages => 'warning'
   }
 
   config.right = {
-    :adapter  => 'postgresql',   
-    :database => 'rr_right',   
-    :username => 'postgres',   
-    :password => 'password',   
+    :adapter  => 'postgresql',
+    :database => 'rr_right',
+    :username => 'rubyrep',
+    :password => 'rubyrep',
     :host     => 'localhost',
     :min_messages => 'warning'
   }

@@ -9,7 +9,7 @@ module RR
     CONFIG_TEMPLATE = <<EOF
 RR::Initializer::run do |config|
   config.left = {
-    :adapter  => 'postgresql', # or 'mysql2'
+    :adapter  => 'postgresql',
     :database => 'SCOTT',
     :username => 'scott',
     :password => 'tiger',
@@ -34,7 +34,7 @@ EOF
       :command => self,
       :description => 'Generates a configuration file template'
     }
-    
+
     # Provided options. Possible values:
     # * +:config_file+: path to config file
     attr_accessor :options
@@ -101,5 +101,3 @@ EOS
 
   end
 end
-
-

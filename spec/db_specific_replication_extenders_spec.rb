@@ -7,7 +7,7 @@ require 'postgresql_replication.rb'
 
 include RR
 
-extenders = [:postgres, :mysql]
+extenders = [:postgres]
 
 extenders.each do |extender|
   describe "#{extender.to_s.capitalize} Replication Extender" do

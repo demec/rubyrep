@@ -45,9 +45,6 @@ shared_examples "ReplicationExtender" do
         if ENV['RR_TEST_DB'] == 'postgres'
           # time is stored in UTC but activerecord attaches local time zone
           change_time += ' UTC'
-        elsif ENV['RR_TEST_DB'] == 'mysql'
-          # time is stored in local time zone but activerecord attaches UTC time zone
-          change_time = change_time.to_s.sub(/ UTC$/, '')
         end
         change_time = Time.parse(change_time)
         change_time.should >= change_start - 10.seconds

@@ -31,14 +31,14 @@ namespace :spec do
 
   desc "Run the specs for all supported databases"
   task :all_dbs do
-    [:postgres, :mysql].each do |test_db|
+    [:postgres].each do |test_db|
       puts "Running specs for #{test_db}"
       system "bash -c 'RR_TEST_DB=#{test_db} rspec spec'"
     end
   end
-  
-  desc "Run the specs for all supported databases and ruby platforms" 
+
+  desc "Run the specs for all supported databases and ruby platforms"
   task :all_rubies do
-    system %(rvm ruby@rubyrep,jruby@rubyrep do bash -c 'for db in postgres mysql; do echo "`rvm current` - $db:"; RR_TEST_DB=$db rspec spec; done')
+    system %(rvm ruby@rubyrep,jruby@rubyrep do bash -c 'for db in postgres; do echo "`rvm current` - $db:"; RR_TEST_DB=$db rspec spec; done')
   end
 end
